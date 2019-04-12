@@ -53,8 +53,7 @@ DOWNLOAD_DELAY = .25
 # Enable or disable downloader middlewares
 # See https://doc.scrapy.org/en/latest/topics/downloader-middleware.html
 DOWNLOADER_MIDDLEWARES = {
-   'trip.middlewares.TripDownloaderMiddleware': 400,
-   'trip.middlewares.CustomProxyMiddleware': 350,
+   'trip.middlewares.TripDownloaderMiddleware': 543,
 }
 
 # Enable or disable extensions
