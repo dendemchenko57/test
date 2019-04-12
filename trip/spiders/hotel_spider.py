@@ -23,7 +23,7 @@ class TripAdvisorHotelItem(scrapy.Spider):
     allowed_domains = ["https://www.tripadvisor.com", ]
 
     def __init__(self):
-        self.driver = webdriver.Chrome(chrome_options=options)
+        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", chrome_options=options)
 
     def start_requests(self):
         for url in self.start_urls:

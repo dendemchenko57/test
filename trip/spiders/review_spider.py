@@ -24,7 +24,7 @@ class TripAdvisorReview(scrapy.Spider):
         super().__init__(*args, **kwargs)
 
         self.proxy_suplier = GimmeProxy()
-        self.driver = webdriver.Chrome(chrome_options=options)
+        self.driver = webdriver.Chrome(executable_path="/usr/bin/chromedriver", chrome_options=options)
 
     def start_requests(self):
         for url in self.start_urls:

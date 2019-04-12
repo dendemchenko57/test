@@ -26,6 +26,7 @@ class TripPipeline(object):
     def open_spider(self, spider):
         self.client = pymongo.MongoClient(self.mongo_uri)
         self.db = self.client[self.mongo_db]
+        self.db.authenticate('trip', 'abc123trip')
         if spider.name == 'tripadvisor_hotel':
             logging.debug("Change collection name")
             self.collection_name = spider.name
